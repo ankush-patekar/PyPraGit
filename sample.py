@@ -89,16 +89,16 @@ for k,v in student_data.items():
         #     print(k, k1 )
 '''
 
-# def arithmatic_ops(a,b):
-#     add = a + b
-#     sub = a - b
-#     muilt = a * b
-#     try:
-#         div = a / b
-#         print(div)
-#     except:
-#         print("division by zero not allowed")
-#
-#     print(add, sub , muilt)
-#
-# arithmatic_ops(15,0)
+def arithmatic_ops(a,b):
+    add = a + b
+    sub = a - b
+    muilt = a * b
+    try:
+        div = a / b
+        print(div)
+    except:
+        print("division by zero not allowed")
+
+    print(add, sub , muilt)
+
+arithmatic_ops(15,0)
