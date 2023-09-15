@@ -29,3 +29,23 @@ comp.config()
 
 '''
 
+# ---------------------------------------------------------------------------
+'''
+Errors:
+Compile errors : syntax errors : missing parenthesis, missing a semicolon, utilizing undeclared variables,
+runtime errors : name errors(incorrect attribute name), type errors(user trying to add string and int ), 
+                    index errors(list have 4 element and user using index 4)
+logical errors : 2+2 = 5 
+attribute errors: string.reverse() ('str' object has no attribute 'reverse')
+
+
+try:
+    x = int(input("Enter a number: "))
+    y = 10 / x
+    print("The result is:", y)
+except ValueError:
+    print("You must enter a valid integer.")
+except ZeroDivisionError:
+    print("You cannot divide by zero.")
+'''
+# ------------------------------------------------------------------------------
