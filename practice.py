@@ -49,3 +49,41 @@ except ZeroDivisionError:
     print("You cannot divide by zero.")
 '''
 # ------------------------------------------------------------------------------
+
+'''
+import requests
+import urllib3
+import json
+from urllib3.exceptions import InsecureRequestWarning
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# creating obj for session
+s = requests.session()
+# verify the server's TLS certificate
+s.verify = False
+# declare variable for uname and password
+username = "Administrator@vsphere.local"
+password = "Admin!23"
+# Getting session ID for to authenticate followed api requests
+session_id = s.post("https://172.17.41.44/rest/com/vmware/cis/session?~method=post", auth=(username,password))
+# Getting all VM details(vm name, VMid, power_state)
+vm_details = s.get("https://172.17.41.44/rest/vcenter/vm")
+# VM info in json format
+vm_info = vm_details.json()
+
+# declare empty list to add VM ID
+vm_id = []
+for attr in vm_info["value"]:
+    if attr["power_state"] == "POWERED_OFF":
+        # print(attr["vm"])
+        id = attr["vm"]
+        vm_id.append(id)
+
+# print(id)
+if vm_id != []:
+    for id in vm_id:
+        s.post("https://172.17.41.44/rest/vcenter/vm/"+id+"/power/start")
+else:
+    print("All the VMs are in powered on State")
+
+'''
