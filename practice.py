@@ -87,3 +87,11 @@ else:
     print("All the VMs are in powered on State")
 
 '''
+
+'''
+Enumarate - returning index as well as value
+
+l = ['ankush','patekar','rahul','Ajay']
+for ind, val in enumerate(l):
+    print("Name " + val + " is listed at " , ind)
+'''
