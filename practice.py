@@ -95,3 +95,46 @@ l = ['ankush','patekar','rahul','Ajay']
 for ind, val in enumerate(l):
     print("Name " + val + " is listed at " , ind)
 '''
+'''
+Unlike lists, items in dictionaries are unordered.
+list:
+spam = ['cats', 'dogs', 'moose']
+bacon = ['dogs', 'moose', 'cats']
+if spam == bacon:
+    print(True)
+else:
+    print(False)
+    
+Dict:
+eggs = {'name': 'Zophie', 'species': 'cat', 'age': '8'}
+ham = {'species': 'cat', 'age': '8', 'name': 'Zophie'}
+
+if eggs == ham:
+    print(True)
+else:
+    print(False)
+
+'''
+'''
+The join() Method
+The join() method is useful when you have a list of strings that need to be joined together into a single string value.
+The join() method is called on a string, gets passed a list of strings, and returns a string.
+string = ' '.join(['My', 'name', 'is', 'Simon'])
+-> My name is Simon
+print(string)
+
+split() Methods
+called on a string value and returns a list of strings
+
+x = ("Ankush_1234").split('_')
+print(x)
+['Ankush', '1234']
+'''
+
+'''
+ord() and chr() Functions
+print(ord("Z"))
+print(chr(50))
+'''
+
+
