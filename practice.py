@@ -138,3 +138,68 @@ print(chr(50))
 '''
 
 
+# fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+#
+# newlist = []
+#
+# for x in fruits:
+#     if x == "banana":
+#         x = "orange"
+#     newlist.append(x)
+#
+# print(newlist)
+
+# with open("test.txt", "r") as f:
+#     print(f.read())
+
+'''
+# wite a function in Python to count and display the total number of words in a text file
+
+def fword():
+    with open("test.txt", "r") as f:
+      data = f.read()
+    # file = open("test.txt", "r")
+    # data = file.read()
+    print(data)
+    words = data.split()
+    count = 0
+    for word in words:
+        count = count + 1
+    print(count)
+fword()
+
+'''
+
+
+'''
+# Write a function display_words() in python to read lines from a text file "story.txt", and display those words, which are less than 4 characters
+
+def display_words():
+    with open("test.txt", "r") as f:
+        data = f.read()
+        print(data)
+    words = data.split()
+    for word in words:
+        if len(word) < 4:
+            print(word)
+display_words()
+'''
+
+'''
+# Write a function in Python to count words in a text file those are ending with alphabet "e"
+def words_end_e():
+    with open("test.txt", "r") as f:
+        data = f.read()
+        print(data)
+        words = data.split()
+        count_End_with_E = 0
+        for word in words:
+            if word.endswith('e'):
+                count_End_with_E = count_End_with_E +1
+        print(count_End_with_E)
+words_end_e()
+'''
+
+
+
+
