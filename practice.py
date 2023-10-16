@@ -200,6 +200,30 @@ def words_end_e():
 words_end_e()
 '''
 
+'''
+# Write a program to enter names of employees and their salaries as input and store them in a dictionary
+count = 0
+d = {}
+while count <= 4:
+    name = input("Enter name: ")
+    salary = input("Enter salary")
 
+    d[name] = salary
+    count = count +1
+print(d)
+'''
+
+'''
+# Write a program that reads string from user. Your program should create a dictionary having key as word length and value is count of words of that length.
+
+s = input("Enter string: ")
+d = {}
+for word in s.split():
+    if len(word) in d:
+        d[len(word)] += 1
+    else:
+        d[len(word)] = 1
+print(d)
+'''
 
 
