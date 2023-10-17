@@ -224,6 +224,122 @@ for word in s.split():
     else:
         d[len(word)] = 1
 print(d)
+# '''
+#         ************************ String  *******************************
+
+''''
+# Write a Python program to count the number of vowels and consonants in a given string.
+
+string = input("Enter any string: ")
+# string = 'Anushka'
+v = []
+c = []
+vcount=0
+for s in string:
+    if s == 'a' or s=='e' or s=='i'or s=='o'or s=='u'or s=='A'or s=='E'or s=='I'or s=='O'or s=='U':
+        v.append(s)
+        vcount= vcount+1
+    else:
+        c.append(s)
+
+print("Vowels in given String: ", v)
+print("number of vowels in given string: ", vcount)
+# print(c)
 '''
 
+'''
+# Write a Python program to check if a string entered by the user is a palindrome or not
 
+str1 = input("ENter any string: ")
+
+if str1 == str1[::-1]:
+    print("Entered string is palindrome")
+else:
+    print("Not Palindrome")
+'''
+'''
+# Write a Python program to perform basic string compression using the counts of repeated characters. For example, the string "aabcccccaaa" would become "a2b1c5a3". If the compressed string is not smaller than the original string, your method should return the original string.
+
+def com_str(s):
+    com_str = ''
+    ctr = 1
+    for i in range(1, len(s)+1):
+        if s[i]==s[i-1]:
+            ctr+=1
+        else:
+            com_str = com_str + s[i-1] + str(ctr)
+            ctr = 1
+    return com_str if len(com_str) < len(s) else s
+
+com_str('abbccc')
+print(com_str())
+'''
+
+'''
+# Word Frequency: Write a Python program that takes a string as input and calculates the frequency of each word in the string. Output the words and their corresponding frequencies.
+# Character Frequency: Write a Python program that takes a string as input and calculates the frequency of each character in the string. Output the characters and their corresponding frequencies
+test_string = 'Jaudyanagade'
+d={}
+# for c in test_string.split():           to calculate frequency of words
+for c in test_string:                    To calculate frequency of char
+    if c not in d:
+        d[c]=1
+    else:
+        d[c] += 1
+print(d)
+'''
+
+'''
+# Write a Python program to determine if a string has all unique characters. Return True if the string has all unique characters, and False otherwise.
+
+test_string = input("Enter string: ")
+list = []
+for c in test_string:
+    if c not in list:
+        list.append(c)
+    else:
+        pass
+if len(list) <= 1:
+    print(True)
+else:
+    print(False)
+
+'''
+
+'''
+# Word Reversal:
+# Write a Python program that takes a sentence as input and reverses the order of words in the sentence. For example, if the input is "Hello World," the output should be "World Hello."
+
+test_string = input("Enter string: ")
+# test_string = 'hello world'
+words = test_string.split()
+
+rev_string = " ".join(reversed(words))
+print(rev_string)
+'''
+
+'''
+# Title Case Conversion:Write a Python program that converts a given sentence to title case. Title case means that the first letter of each word in the sentence is capitalized, and all other letters are in lowercase.
+
+test_string = 'i love my india'
+print(test_string.title())
+
+'''
+
+'''
+# Substring Removal:Write a Python function that removes all occurrences of a specified substring from a given string. The function should take two strings as input: the main string and the substring to be removed
+
+
+def remove_SubString(mstr, sstring):
+    l1 = []
+    for c in mstr:
+        l1.append(c)
+
+    for c in sstring:
+        if c in l1:
+            l1.remove(c)
+
+    print("".join(l1))
+
+remove_SubString('ankush', 'auz')
+'''
