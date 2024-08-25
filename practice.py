@@ -51,6 +51,7 @@ except ZeroDivisionError:
 # ------------------------------------------------------------------------------
 
 '''
+
 import requests
 import urllib3
 import json
@@ -172,12 +173,13 @@ fword()
 
 
 '''
+
 # Write a function display_words() in python to read lines from a text file "story.txt", and display those words, which are less than 4 characters
 
 def display_words():
     with open("test.txt", "r") as f:
         data = f.read()
-        print(data)
+        # print(data)
     words = data.split()
     for word in words:
         if len(word) < 4:
@@ -236,7 +238,7 @@ v = []
 c = []
 vcount=0
 for s in string:
-    if s == 'a' or s=='e' or s=='i'or s=='o'or s=='u'or s=='A'or s=='E'or s=='I'or s=='O'or s=='U':
+    if s == 'a' or s=='e' or s=='i 'or s=='o' or s=='u' or s=='A' or s=='E' or s=='I' or s=='O' or s=='U':
         v.append(s)
         vcount= vcount+1
     else:
@@ -343,3 +345,131 @@ def remove_SubString(mstr, sstring):
 
 remove_SubString('ankush', 'auz')
 '''
+
+# *************************************** List ****************************************
+
+'''
+List Manipulation:
+Write a Python program to perform the following operations on a list:
+
+Add an element to the end of the list
+Insert an element at a specific position
+Remove an element from the list by value
+Sort the list in ascending and descending order
+
+
+test_list = [1,2,4,7 , 55, 'ankush', '23.5']
+
+test_list.append('end')
+print(test_list)
+test_list.insert(2, 'insert')
+print(test_list)
+test_list.remove(1)
+print(test_list)
+test_list.sort()
+
+'''
+
+'''
+# List Reversal:Write a Python program to reverse a list without using the reverse() method.
+
+# test_list = [5,6,7,8,9]
+# rev_list = test_list[::-1]
+
+original_list = [1, 2, 3, 4, 5]
+print("List before reverse : ",original_list)
+reversed_list = []
+for value in original_list:
+  reversed_list = [value] + reversed_list
+print("List after reverse : ", reversed_list)
+'''
+
+
+'''
+#List Intersection: Write a Python program to find the intersection of two lists. Intersection means the elements common to both lists.
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [6, 7, 8, 9, 1]
+list3 = []
+for i in list1:
+    for j in list2:
+        if i==j:
+            list3.append(i)
+print(list3)
+
+'''
+
+'''
+# List Rotation:
+# Write a Python function that rotates a list by a specified number of positions. For example, if the input list is [1, 2, 3, 4, 5] and the rotation is 2, the output should be [3, 4, 5, 1, 2].
+
+def rotate_list(lst, position):
+
+    # Perform the rotation using list slicing
+    rotated_list = lst[position:] + lst[:position]
+    return rotated_list
+lst = [1,2,3,4,5]
+position = 5
+print(rotate_list(lst, position))
+'''
+'''
+# find min and max in list
+
+lst = [1,2,3,4,5,9,8,6]
+min_num= 0
+max_num = 0
+for n in lst:
+    # min_num = n
+    # max_num = n
+    if n < min_num:
+        min_num = n
+    elif n > max_num:
+        max_num = n
+'''
+# del, Pop and remove
+'''
+# Use del when you want to delete an element or slice by index.
+# Use pop() when you want to remove and retrieve an element by index.
+# Use remove() when you want to remove the first occurrence of a specific value from the list.
+
+lst = [1,3,5,7,3,9]
+del lst[2]
+print(lst)
+
+pop_ele = lst.pop(2)
+print(pop_ele)
+
+lst.remove(3)
+print(lst)
+
+'''
+# decorator
+'''
+def my_decorator(fucn):
+    def wrapper():
+        print("before calling fn")
+        fucn()
+        print("after calling fn")
+    return wrapper()
+
+@my_decorator
+def say_hello():
+    print("Hello")
+
+say_hello()
+'''
+# check given number is prime or not
+
+num = int(input("enter any integer: "))
+flag = False
+if num < 2:
+    print(num, "is prime")
+else:
+    for i in range(2, num):
+        if num % i == 0:
+            flag = True
+            break
+if flag:
+    print(num, "is not prime")
+else:
+    print(num, "is prime")
